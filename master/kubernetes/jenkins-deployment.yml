@@ -16,6 +16,11 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+          name: http
+          protocol: TCP
+        - containerPort: 50000
+          name: remote
+          protocol: TCP
         volumeMounts:
         - name: jenkins-persistent-storage
           mountPath: /var/jenkins_home
