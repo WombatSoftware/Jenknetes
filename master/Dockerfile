@@ -1,4 +1,4 @@
-FROM jenkins:2.7.1-alpine
+FROM jenkins:2.19.4-alpine
 USER root
 
 # install plugins
