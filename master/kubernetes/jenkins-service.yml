@@ -15,4 +15,4 @@ spec:
       targetPort: 50000
   selector:
     app: jenkins
-    version: 2.7.1
+    version: 2.19.4r1

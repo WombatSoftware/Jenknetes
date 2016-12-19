@@ -8,11 +8,11 @@ spec:
     metadata:
       labels:
         app: jenkins
-        version: 2.7.1
+        version: 2.19.4r1
     spec:
       containers:
       - name: jenkins-master
-        image: quay.io/jenknetes/master:2.7.1
+        image: quay.io/jenknetes/master:2.19.4r1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
