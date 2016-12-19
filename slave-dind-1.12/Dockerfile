@@ -20,7 +20,7 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 #  THE SOFTWARE.
 
-FROM docker:1.12.0-dind
+FROM docker:1.12.4-dind
 MAINTAINER Daniel Sachse <daniel@wombatsoftware.de>
 
 # Default to UTF-8 file.encoding
