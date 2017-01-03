@@ -27,4 +27,4 @@ The `Label` inside the `Kubernetes Pod Template` can later be used in the `Jenki
 Currently we have 2 running images and we are happy if you share your experiences and help us improve them or create new ones:
 
 * Docker-in-Docker 1.11 + Jenkins Slave: `quay.io/jenknetes/slave-dind:1.11.2r1`
-* Docker-in-Docker 1.12 + Jenkins Slave: `quay.io/jenknetes/slave-dind:1.12.4r1`
+* Docker-in-Docker 1.12 + Jenkins Slave: `quay.io/jenknetes/slave-dind:1.12.5`
