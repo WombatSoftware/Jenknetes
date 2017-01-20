@@ -20,7 +20,7 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 #  THE SOFTWARE.
 
-FROM docker:1.11.2-dind
+FROM docker:1.13.0-dind
 MAINTAINER Daniel Sachse <daniel@wombatsoftware.de>
 
 # Default to UTF-8 file.encoding
@@ -39,7 +39,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 ENV PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
 
 ENV JAVA_VERSION 8u111
-ENV JAVA_ALPINE_VERSION 8.111.14-r0
+ENV JAVA_ALPINE_VERSION 8.111.14-r1
 
 RUN set -x \
 	&& apk --no-cache add openjdk8="$JAVA_ALPINE_VERSION" \
@@ -48,7 +48,7 @@ RUN set -x \
 ENV HOME /home/jenkins
 
 RUN apk --no-cache add bash openssh-client && \
-    curl --create-dirs -sSLo /usr/share/jenkins/slave.jar http://repo.jenkins-ci.org/public/org/jenkins-ci/main/remoting/3.3/remoting-3.3.jar && \
+    curl --create-dirs -sSLo /usr/share/jenkins/slave.jar http://repo.jenkins-ci.org/public/org/jenkins-ci/main/remoting/3.4/remoting-3.4.jar && \
     chmod 755 /usr/share/jenkins && \
     chmod 644 /usr/share/jenkins/slave.jar && \
     apk del curl && \
