@@ -42,13 +42,14 @@ ENV JAVA_VERSION 8u111
 ENV JAVA_ALPINE_VERSION 8.111.14-r0
 
 RUN set -x \
+    && apk --no-cache upgrade \
 	&& apk --no-cache add openjdk8="$JAVA_ALPINE_VERSION" \
 	&& [ "$JAVA_HOME" = "$(docker-java-home)" ]
 
 ENV HOME /home/jenkins
 
 RUN apk --no-cache add bash openssh-client && \
-    curl --create-dirs -sSLo /usr/share/jenkins/slave.jar http://repo.jenkins-ci.org/public/org/jenkins-ci/main/remoting/3.4/remoting-3.4.jar && \
+    curl --create-dirs -sSLo /usr/share/jenkins/slave.jar http://repo.jenkins-ci.org/public/org/jenkins-ci/main/remoting/3.7/remoting-3.7.jar && \
     chmod 755 /usr/share/jenkins && \
     chmod 644 /usr/share/jenkins/slave.jar && \
     apk del curl && \
