@@ -28,3 +28,4 @@ Currently we have 2 running images and we are happy if you share your experience
 
 * Docker-in-Docker 1.12 + Jenkins Slave: `quay.io/jenknetes/slave-dind:1.12.6r1`
 * Docker-in-Docker 1.13 + Jenkins Slave: `quay.io/jenknetes/slave-dind:1.13.1`
+* Docker-in-Docker 17.03.0-ce + Jenkins Slave: `quay.io/jenknetes/slave-dind:17.03.0-ce`
